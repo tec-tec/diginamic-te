@@ -10,4 +10,13 @@ import Foundation
 
 class Directory {
 
+    private var storage = [Place]()
+
+    var allPlaces: [Place] {
+        return storage
+    }
+
+    func add(place: Place) {
+        storage.append(place)
+    }
 }

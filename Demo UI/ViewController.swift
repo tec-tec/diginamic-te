@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var latitudeTextField: UITextField!
     @IBOutlet weak var longitudeTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var websiteTexField: UITextField!
+    @IBOutlet weak var websiteTextField: UITextField!
     @IBOutlet weak var wikiLinkTextField: UITextField!
     @IBOutlet weak var reviewSlider: UISlider!
     @IBOutlet var coordinateTextFields: [UITextField]!

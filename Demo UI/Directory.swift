@@ -15,6 +15,12 @@ class Directory {
     }
 
     func add(place: Place) {
+        guard !storage.contains(place) else { return }
         storage.append(place)
+    }
+
+    func remove(place: Place) {
+        guard let index = storage.index(of: place) else { return }
+        storage.remove(at: index)
     }
 }

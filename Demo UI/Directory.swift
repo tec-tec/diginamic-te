@@ -6,8 +6,6 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
-import Foundation
-
 class Directory {
 
     private var storage = [Place]()

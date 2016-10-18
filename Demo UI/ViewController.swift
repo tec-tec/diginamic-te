@@ -13,6 +13,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var setWithCurrentLocationSwitch: UISwitch!
+    @IBOutlet weak var latitudeTextField: UITextField!
+    @IBOutlet weak var longitudeTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var websiteTexField: UITextField!
+    @IBOutlet weak var wikiLinkTextField: UITextField!
+    @IBOutlet weak var reviewSlider: UISlider!
+    @IBOutlet var coordinateTextFields: [UITextField]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +33,18 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func savePlace(_ sender: AnyObject) {
+    }
+
+    @IBAction func cancel(_ sender: AnyObject) {
+    }
+    
+    @IBAction func autoCoordinatesSwitchValueChanged(_ sender: UISwitch) {
+
+        for tf in coordinateTextFields {
+            tf.isEnabled = !sender.isOn
+        }
     }
 
 

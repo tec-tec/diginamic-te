@@ -36,6 +36,9 @@
                                 <frame key="frameInset" minX="319" minY="28" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePlace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDL-m1-lmE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ALq-0D-gPQ">
                                 <frame key="frameInset" minX="87" minY="104" width="272" height="30"/>
@@ -55,10 +58,16 @@
                                 <frame key="frameInset" minX="16" minY="28" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HYr-Li-coJ"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ObO-Jq-v24">
                                 <frame key="frameInset" minX="304" minY="142" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="autoCoordinatesSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DfI-kV-aRg"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nq-Kn-ELu">
                                 <frame key="frameInset" minX="203" minY="181" width="150" height="30"/>
@@ -137,6 +146,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="ALq-0D-gPQ" id="jgt-M3-enI"/>
+                        <outlet property="latitudeTextField" destination="Ezs-MR-ToP" id="uBp-uF-CE6"/>
+                        <outlet property="longitudeTextField" destination="1nq-Kn-ELu" id="YeD-h3-IA5"/>
+                        <outlet property="nameTextField" destination="a3s-Um-6lY" id="Y59-Rm-gGp"/>
+                        <outlet property="phoneTextField" destination="blE-I8-ZbK" id="GSc-36-z3f"/>
+                        <outlet property="reviewSlider" destination="vdh-i3-usR" id="ikx-6M-L6h"/>
+                        <outlet property="setWithCurrentLocationSwitch" destination="ObO-Jq-v24" id="lmJ-Ra-WET"/>
+                        <outlet property="websiteTexField" destination="3lc-Oe-Nuf" id="XiB-5Z-LLV"/>
+                        <outlet property="wikiLinkTextField" destination="dad-4G-RUJ" id="Nmt-vn-cwO"/>
+                        <outletCollection property="coordinateTextFields" destination="Ezs-MR-ToP" collectionClass="NSMutableArray" id="rAg-lT-Eew"/>
+                        <outletCollection property="coordinateTextFields" destination="1nq-Kn-ELu" collectionClass="NSMutableArray" id="Scd-gT-AJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

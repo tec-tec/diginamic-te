@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         return place
     }
 
+    let directory = Directory()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,6 +52,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func savePlace(_ sender: AnyObject) {
+        guard let place = placeFromForm else { return }
+        directory.add(place: place)
     }
 
     @IBAction func cancel(_ sender: AnyObject) {

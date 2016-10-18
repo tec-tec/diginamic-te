@@ -8,6 +8,9 @@
 
 import UIKit
 
+// Class xxxx is not key value coding compliant for key yyy (Au lancement de l'app)
+// Unrecognized selector sent to instance (Au déclenchement d'une action)
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

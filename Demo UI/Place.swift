@@ -11,7 +11,7 @@ import Foundation
 struct Place: Equatable {
 
     let name: String
-    let adress: String
+    let address: String
     let phoneNumber: String?
     let websiteURL: URL?
     let wikipediaURL: URL?
@@ -23,7 +23,7 @@ struct Place: Equatable {
 
     static func ==(lhs: Place, rhs: Place) -> Bool {
 
-        if lhs.name == rhs.name && lhs.adress == rhs.adress {
+        if lhs.name == rhs.name && lhs.address == rhs.address {
             return true
         }
         return false

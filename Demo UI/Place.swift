@@ -18,6 +18,6 @@ struct Place {
     let note: Float
     let numberOfReviews: Int
 
-    let latitude: Double
-    let longitude: Double
+    let latitude: Double?
+    let longitude: Double?
 }

@@ -90,5 +90,12 @@ class ViewController: UIViewController {
         sender.value = Float(intValue)
     }
 
+    //MARK: - Errors definition
+
+    enum FormError: Error {
+        case nilTextIn (textField: UITextField)
+        case notEnoughtCharactersIn (textField: UITextField, minCharacters: Int)
+        case wrongTypeOfDataIn (textField: UITextField)
+    }
 }
 

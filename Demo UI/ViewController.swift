@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet var topButtons: [UIButton]!
 
     //MARK: - Instance variables
-    let directory = Directory()
+    let directory = Directory.instance
 
     //MARK: - Lifecycle
     override func viewDidLoad() {

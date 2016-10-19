@@ -10,7 +10,7 @@ import UIKit
 
 class PlaceTableViewController: UITableViewController {
 
-    let directory = Directory()
+    let directory = Directory.instance
 
     override func viewDidLoad() {
         super.viewDidLoad()

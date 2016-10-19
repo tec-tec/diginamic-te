@@ -8,7 +8,13 @@
 
 class Directory {
 
-    private var storage = [Place]()
+    static let instance = Directory()
+
+    private var storage: [Place]
+
+    private init() {
+        storage = []
+    }
 
     var allPlaces: [Place] {
         return storage

@@ -27,6 +27,19 @@ struct Place: Equatable {
 
     let source: Source
 
+    init(name: String, address: String, phoneNumber: String?, websiteURL: URL?, wikipediaURL: URL?, note: Float, numberOfReviews: Int, latitude: Double?, longitude: Double?, source: Source = .local) {
+        self.name = name
+        self.address = address
+        self.phoneNumber = phoneNumber
+        self.websiteURL = websiteURL
+        self.wikipediaURL = wikipediaURL
+        self.note = note
+        self.numberOfReviews = numberOfReviews
+        self.latitude = latitude
+        self.longitude = longitude
+        self.source = source
+    }
+
     static func ==(lhs: Place, rhs: Place) -> Bool {
 
         if lhs.name == rhs.name && lhs.address == rhs.address {

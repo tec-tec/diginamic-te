@@ -42,7 +42,8 @@ class ViewController: UIViewController {
         guard let lat = latitudeTextField.text, let latDouble = Double(lat) else {
             throw FormError.wrongTypeOfDataIn(textField: latitudeTextField)
         }
-        guard let long = longitudeTextField.text, let longDouble = Double(long) else {             throw FormError.wrongTypeOfDataIn(textField: longitudeTextField)
+        guard let long = longitudeTextField.text, let longDouble = Double(long) else {
+            throw FormError.wrongTypeOfDataIn(textField: longitudeTextField)
         }
         guard let websiteUrlString = websiteTextField.text else {
             throw FormError.nilTextIn(textField: websiteTextField)

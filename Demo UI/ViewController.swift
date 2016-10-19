@@ -100,6 +100,7 @@ class ViewController: UIViewController {
             print("Lieu ajouté")
         } catch FormError.nilTextIn(let textField) {
             textField.backgroundColor = UIColor.red
+            textField.sayNo()
         } catch FormError.notEnoughtCharactersIn(let textField, let minCharacters) {
             textField.backgroundColor = UIColor.red
             alert(title: "Vérifiez votre saisie", message: "Certains champs n'ont pas assez de caractères. Nombre minimal : \(minCharacters)")

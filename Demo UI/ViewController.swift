@@ -13,6 +13,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var setWithCurrentLocationSwitch: UISwitch!
@@ -27,6 +28,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var reviewValueLabel: UILabel!
     @IBOutlet var topButtons: [UIButton]!
 
+    //MARK: - Instance variables
+    let directory = Directory()
+
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    //MARK: - Private methods
     private func placeFromForm() throws -> Place {
         guard let name = nameTextField.text else {
             throw FormError.nilTextIn(textField: nameTextField)
@@ -57,18 +73,6 @@ class ViewController: UIViewController {
         return place
     }
 
-    let directory = Directory()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     private func alert(title: String = "Erreur", message: String = "Quelque chose s'est mal passé", actionTitle: String = "OK") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
@@ -83,6 +87,7 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
+    //MARK: - IBActions
     @IBAction func savePlace(_ sender: AnyObject) {
 
         for tf in allTextFields {
@@ -122,7 +127,6 @@ class ViewController: UIViewController {
     }
 
     //MARK: - Errors definition
-
     enum FormError: Error {
         case nilTextIn (textField: UITextField)
         case notEnoughtCharactersIn (textField: UITextField, minCharacters: Int)

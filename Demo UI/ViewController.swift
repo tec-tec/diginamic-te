@@ -13,7 +13,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var setWithCurrentLocationSwitch: UISwitch!
@@ -24,17 +23,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var wikiLinkTextField: UITextField!
     @IBOutlet weak var reviewSlider: UISlider!
     @IBOutlet var coordinateTextFields: [UITextField]!
+    @IBOutlet var allTextFields: [UITextField]!
     @IBOutlet weak var reviewValueLabel: UILabel!
 
-    private var placeFromForm: Place? {
-        guard let name = nameTextField.text else { return nil }
-        guard name.characters.count > 2 else { return nil }
-        guard let address = addressTextField.text else { return nil}
-        guard address.characters.count > 2 else { return nil }
-        guard let lat = latitudeTextField.text, let latDouble = Double(lat) else { return nil}
-        guard let long = longitudeTextField.text, let longDouble = Double(long) else { return nil}
-        guard let websiteUrlString = websiteTextField.text else { return nil }
-        guard let wikipediaUrlString = wikiLinkTextField.text else { return nil }
+    private func placeFromForm() throws -> Place {
+        guard let name = nameTextField.text else {
+            throw FormError.nilTextIn(textField: nameTextField)
+        }
+        guard name.characters.count > 2 else {
+            throw FormError.notEnoughtCharactersIn(textField: nameTextField, minCharacters: 3)
+        }
+        guard let address = addressTextField.text else {
+            throw FormError.nilTextIn(textField: addressTextField)
+        }
+        guard address.characters.count > 2 else {
+            throw FormError.notEnoughtCharactersIn(textField: addressTextField, minCharacters: 3)
+        }
+        guard let lat = latitudeTextField.text, let latDouble = Double(lat) else {
+            throw FormError.wrongTypeOfDataIn(textField: latitudeTextField)
+        }
+        guard let long = longitudeTextField.text, let longDouble = Double(long) else {             throw FormError.wrongTypeOfDataIn(textField: longitudeTextField)
+        }
+        guard let websiteUrlString = websiteTextField.text else {
+            throw FormError.nilTextIn(textField: websiteTextField)
+        }
+        guard let wikipediaUrlString = wikiLinkTextField.text else {
+            throw FormError.nilTextIn(textField: wikiLinkTextField)
+        }
 
         let place = Place(name: name, address: address, phoneNumber: phoneTextField.text, websiteURL: URL(string: websiteUrlString), wikipediaURL: URL(string: wikipediaUrlString), note: reviewSlider.value, numberOfReviews: 1, latitude: latDouble, longitude: longDouble)
         return place
@@ -67,12 +82,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func savePlace(_ sender: AnyObject) {
-        guard let place = placeFromForm else {
-            alert(message: "Erreur de formulaire")
-            return
+
+        for tf in allTextFields {
+            tf.backgroundColor = UIColor.white
         }
-        directory.add(place: place)
-        print("Lieu ajouté")
+
+        do {
+            let place = try placeFromForm()
+            directory.add(place: place)
+            print("Lieu ajouté")
+        } catch FormError.nilTextIn(let textField) {
+            textField.backgroundColor = UIColor.red
+        } catch FormError.notEnoughtCharactersIn(let textField, let minCharacters) {
+            textField.backgroundColor = UIColor.red
+            alert(title: "Vérifiez votre saisie", message: "Certains champs n'ont pas assez de caractères. Nombre minimal : \(minCharacters)")
+        } catch FormError.wrongTypeOfDataIn(let textField) {
+            textField.backgroundColor = UIColor.red
+            alert(title: "Vérifiez votre saisie", message: "Certains champs contiennent des caractères non autorisés")
+        } catch {
+            print(error)
+        }
     }
 
     @IBAction func cancel(_ sender: AnyObject) {

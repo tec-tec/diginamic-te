@@ -43,4 +43,17 @@ class PlaceTableViewController: UITableViewController {
         }
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Places"
+        default:
+            return nil
+        }
+    }
 }

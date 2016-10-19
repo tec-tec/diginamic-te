@@ -169,13 +169,15 @@
                         <outlet property="wikiLinkTextField" destination="dad-4G-RUJ" id="Nmt-vn-cwO"/>
                         <outletCollection property="coordinateTextFields" destination="Ezs-MR-ToP" collectionClass="NSMutableArray" id="rAg-lT-Eew"/>
                         <outletCollection property="coordinateTextFields" destination="1nq-Kn-ELu" collectionClass="NSMutableArray" id="Scd-gT-AJN"/>
-                        <outletCollection property="allTextFields" destination="dad-4G-RUJ" id="H2G-Zk-xgR"/>
-                        <outletCollection property="allTextFields" destination="3lc-Oe-Nuf" id="Z1T-3u-man"/>
-                        <outletCollection property="allTextFields" destination="blE-I8-ZbK" id="4qN-7K-1I4"/>
-                        <outletCollection property="allTextFields" destination="1nq-Kn-ELu" id="aq2-B2-3vW"/>
-                        <outletCollection property="allTextFields" destination="Ezs-MR-ToP" id="YIw-YY-Js3"/>
-                        <outletCollection property="allTextFields" destination="ALq-0D-gPQ" id="oPA-Dj-pWN"/>
-                        <outletCollection property="allTextFields" destination="a3s-Um-6lY" id="80k-XP-2h4"/>
+                        <outletCollection property="allTextFields" destination="dad-4G-RUJ" collectionClass="NSMutableArray" id="H2G-Zk-xgR"/>
+                        <outletCollection property="allTextFields" destination="3lc-Oe-Nuf" collectionClass="NSMutableArray" id="Z1T-3u-man"/>
+                        <outletCollection property="allTextFields" destination="blE-I8-ZbK" collectionClass="NSMutableArray" id="4qN-7K-1I4"/>
+                        <outletCollection property="allTextFields" destination="1nq-Kn-ELu" collectionClass="NSMutableArray" id="aq2-B2-3vW"/>
+                        <outletCollection property="allTextFields" destination="Ezs-MR-ToP" collectionClass="NSMutableArray" id="YIw-YY-Js3"/>
+                        <outletCollection property="allTextFields" destination="ALq-0D-gPQ" collectionClass="NSMutableArray" id="oPA-Dj-pWN"/>
+                        <outletCollection property="allTextFields" destination="a3s-Um-6lY" collectionClass="NSMutableArray" id="80k-XP-2h4"/>
+                        <outletCollection property="topButtons" destination="hKg-c1-YgZ" collectionClass="NSMutableArray" id="ED3-AN-oUb"/>
+                        <outletCollection property="topButtons" destination="a6i-Re-s38" collectionClass="NSMutableArray" id="ewe-3q-DPZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

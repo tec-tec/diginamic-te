@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet var coordinateTextFields: [UITextField]!
     @IBOutlet var allTextFields: [UITextField]!
     @IBOutlet weak var reviewValueLabel: UILabel!
+    @IBOutlet var topButtons: [UIButton]!
 
     private func placeFromForm() throws -> Place {
         guard let name = nameTextField.text else {

@@ -101,7 +101,7 @@ class ViewController: UIViewController {
             textField.backgroundColor = UIColor.red
             alert(title: "Vérifiez votre saisie", message: "Certains champs contiennent des caractères non autorisés")
         } catch {
-            print(error)
+            alert(message: error.localizedDescription)
         }
     }
 

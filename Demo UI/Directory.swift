@@ -23,4 +23,11 @@ class Directory {
         guard let index = storage.index(of: place) else { return }
         storage.remove(at: index)
     }
+
+    func generateDemoData() {
+        for i in 0...10 {
+            let place = Place(name: "Demo place n°\(i)" , address: "\(i) rue des Places", phoneNumber: nil, websiteURL: nil, wikipediaURL: nil, note: Float(i%5), numberOfReviews: i, latitude: nil, longitude: nil)
+            storage.append(place)
+        }
+    }
 }

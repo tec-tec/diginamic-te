@@ -10,14 +10,11 @@ import UIKit
 
 class PlaceTableViewController: UITableViewController {
 
+    let directory = Directory()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        directory.generateDemoData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,25 +24,29 @@ class PlaceTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return directory.allPlaces.count + 1
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        let cell: UITableViewCell
+        switch indexPath.row {
+        case directory.allPlaces.count:
+            cell = tableView.dequeueReusableCell(withIdentifier: "adCell", for: indexPath)
+        default:
 
+            let currentPlace = directory.allPlaces[indexPath.row]
+            cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
+            cell.textLabel?.text = currentPlace.name
+            cell.detailTextLabel?.text = currentPlace.address
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

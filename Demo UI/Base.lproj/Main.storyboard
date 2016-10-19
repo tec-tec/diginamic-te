@@ -132,12 +132,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="vdh-i3-usR">
-                                <frame key="frameInset" minX="84" minY="333" width="277" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="vdh-i3-usR">
+                                <frame key="frameInset" minX="84" minY="333" width="250" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="reviewValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OZS-aA-TVD"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-g7-zdA">
                                 <frame key="frameInset" minX="16" minY="338" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX5-Eg-fr2">
+                                <frame key="frameInset" minX="330" minY="338" width="29" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -153,6 +163,7 @@
                         <outlet property="nameTextField" destination="a3s-Um-6lY" id="Y59-Rm-gGp"/>
                         <outlet property="phoneTextField" destination="blE-I8-ZbK" id="GSc-36-z3f"/>
                         <outlet property="reviewSlider" destination="vdh-i3-usR" id="ikx-6M-L6h"/>
+                        <outlet property="reviewValueLabel" destination="JX5-Eg-fr2" id="IBC-rD-oSl"/>
                         <outlet property="setWithCurrentLocationSwitch" destination="ObO-Jq-v24" id="lmJ-Ra-WET"/>
                         <outlet property="websiteTextField" destination="3lc-Oe-Nuf" id="RkF-8m-woh"/>
                         <outlet property="wikiLinkTextField" destination="dad-4G-RUJ" id="Nmt-vn-cwO"/>

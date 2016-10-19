@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var wikiLinkTextField: UITextField!
     @IBOutlet weak var reviewSlider: UISlider!
     @IBOutlet var coordinateTextFields: [UITextField]!
+    @IBOutlet weak var reviewValueLabel: UILabel!
 
     private var placeFromForm: Place? {
         guard let name = nameTextField.text else { return nil }
@@ -65,6 +66,11 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func reviewValueChanged(_ sender: UISlider) {
+        let intValue = Int(sender.value)
+        reviewValueLabel.text = "\(intValue)"
+        sender.value = Float(intValue)
+    }
 
 }
 

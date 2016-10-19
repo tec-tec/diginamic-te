@@ -10,6 +10,10 @@ import Foundation
 
 struct Place: Equatable {
 
+    enum Source: String {
+        case local, internet
+    }
+
     let name: String
     let address: String
     let phoneNumber: String?
@@ -20,6 +24,8 @@ struct Place: Equatable {
 
     let latitude: Double?
     let longitude: Double?
+
+    let source: Source
 
     static func ==(lhs: Place, rhs: Place) -> Bool {
 

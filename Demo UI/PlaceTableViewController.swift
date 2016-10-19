@@ -42,6 +42,13 @@ class PlaceTableViewController: UITableViewController {
             cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
             cell.textLabel?.text = currentPlace.name
             cell.detailTextLabel?.text = currentPlace.address
+
+            //Attention aux "bugs" de recyclage !!
+//            if currentPlace.source == .internet {
+//                cell.backgroundColor = UIColor.blue
+//            } else {
+//                cell.backgroundColor = UIColor.green
+//            }
         }
         
         return cell

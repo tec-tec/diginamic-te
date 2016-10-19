@@ -25,7 +25,11 @@ class Directory {
     }
 
     func generateDemoData() {
-        for i in 0...10 {
+
+        let place = Place(name: "Demo place n°00" , address: "00 rue des Places", phoneNumber: nil, websiteURL: nil, wikipediaURL: nil, note: 2.5, numberOfReviews: 5, latitude: nil, longitude: nil, source: .internet)
+        storage.append(place)
+
+        for i in 0...1000 {
             let place = Place(name: "Demo place n°\(i)" , address: "\(i) rue des Places", phoneNumber: nil, websiteURL: nil, wikipediaURL: nil, note: Float(i%5), numberOfReviews: i, latitude: nil, longitude: nil)
             storage.append(place)
         }

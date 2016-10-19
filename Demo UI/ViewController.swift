@@ -52,9 +52,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    private func alert(title: String = "Erreur", message: String = "Quelque chose s'est mal passé", actionTitle: String = "OK") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: actionTitle, style: .cancel, handler: nil)
+        //            let defaultAction = UIAlertAction(title: "Default", style: .default, handler: nil)
+        //            let destructiveAction = UIAlertAction(title: "Destructive", style: .destructive, handler: nil)
+
+        alertController.addAction(cancelAction)
+        //            alertController.addAction(defaultAction)
+        //            alertController.addAction(destructiveAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
     @IBAction func savePlace(_ sender: AnyObject) {
-        guard let place = placeFromForm else { return }
+        guard let place = placeFromForm else {
+            alert(message: "Erreur de formulaire")
+            return
+        }
         directory.add(place: place)
+        print("Lieu ajouté")
     }
 
     @IBAction func cancel(_ sender: AnyObject) {

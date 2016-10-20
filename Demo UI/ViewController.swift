@@ -30,11 +30,13 @@ class ViewController: UIViewController {
 
     //MARK: - Instance variables
     let directory = Directory.instance
+    var name: String?
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(name)
     }
 
     override func didReceiveMemoryWarning() {

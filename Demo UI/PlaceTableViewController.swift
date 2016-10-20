@@ -62,4 +62,23 @@ class PlaceTableViewController: UITableViewController {
             return nil
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "showForm" {
+            //Transition vers le formulaire
+
+            //Upcast -> sans danger
+//            let vc = ViewController() as UIViewController
+
+            //Downcast
+            guard let destination = segue.destination as? ViewController else {
+                fatalError("Someone changed the storyboard !!")
+            }
+            destination.name = "Ludovic"
+
+        } else if segue.identifier == "showDetails" {
+            //Transition vers le la vue de détails
+        }
+    }
 }

@@ -15,10 +15,11 @@ class PlaceTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         directory.generateDemoData()
-        
+
+        weak var weakSelf = self
         let notCenter = NotificationCenter.default
         notCenter.addObserver(forName: Notification.Name(Constants.NotificationNames.modelUpdated), object: nil, queue: nil) { (notif) in
-            self.tableView.reloadData()
+            weakSelf?.tableView.reloadData()
         }
     }
 

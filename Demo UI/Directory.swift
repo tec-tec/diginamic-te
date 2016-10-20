@@ -6,6 +6,8 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
+import Foundation
+
 class Directory {
 
     static let instance = Directory()
@@ -23,12 +25,14 @@ class Directory {
     func add(place: Place) {
         guard !storage.contains(place) else { return }
         storage.append(place)
+        notifyUpdate()
     }
 
     func remove(place: Place) {
         guard let index = storage.index(of: place) else { return }
         storage.remove(at: index)
-    }
+        notifyUpdate()
+}
 
     func generateDemoData() {
 
@@ -39,5 +43,10 @@ class Directory {
             let place = Place(name: "Demo place n°\(i)" , address: "\(i) rue des Places", phoneNumber: nil, websiteURL: nil, wikipediaURL: nil, note: Float(i%5), numberOfReviews: i, latitude: nil, longitude: nil)
             storage.append(place)
         }
+    }
+
+    private func notifyUpdate() {
+        let notCenter = NotificationCenter.default
+        notCenter.post(name: Notification.Name("modelUpdated"), object: self)
     }
 }

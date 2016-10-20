@@ -47,6 +47,6 @@ class Directory {
 
     private func notifyUpdate() {
         let notCenter = NotificationCenter.default
-        notCenter.post(name: Notification.Name("modelUpdated"), object: self)
+        notCenter.post(name: Notification.Name(Constants.NotificationNames.modelUpdated), object: self)
     }
 }

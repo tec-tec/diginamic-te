@@ -6,4 +6,20 @@
 //  Copyright © 2016 Tec-Tec. All rights reserved.
 //
 
-import Foundation
+struct Constants {
+
+    struct NotificationNames {
+
+        static let modelUpdated = "modelUpdatedNotificationName"
+    }
+
+    struct ServerURLs {
+        struct Prod {
+            static let url = "http://jkgsdjkfr"
+        }
+
+        struct Dev {
+            static let url = "http://jkgsdjkfr"
+        }
+    }
+}

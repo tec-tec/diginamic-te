@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33ACDACD1DB8C2A900363F26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDACC1DB8C2A900363F26 /* Constants.swift */; };
 		33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB61DB7A98B00276650 /* Extensions.swift */; };
 		33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */; };
 		33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEC2A21DB62C4300273EA7 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33ACDACC1DB8C2A900363F26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33DFEBB61DB7A98B00276650 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
 		33FEC29F1DB62C4300273EA7 /* Demo UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 			children = (
 				33FEC2A21DB62C4300273EA7 /* AppDelegate.swift */,
 				33DFEBB61DB7A98B00276650 /* Extensions.swift */,
+				33ACDACC1DB8C2A900363F26 /* Constants.swift */,
 				33FEC2B71DB65FDA00273EA7 /* ViewControllers */,
 				33FEC2B61DB65FCD00273EA7 /* Models */,
 				33FEC2B81DB6608500273EA7 /* Storyboards */,
@@ -177,6 +180,7 @@
 				33FEC2B51DB65FB200273EA7 /* Place.swift in Sources */,
 				33FEC2A51DB62C4300273EA7 /* ViewController.swift in Sources */,
 				33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */,
+				33ACDACD1DB8C2A900363F26 /* Constants.swift in Sources */,
 				33FEC2BA1DB6628900273EA7 /* Directory.swift in Sources */,
 				33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */,
 			);

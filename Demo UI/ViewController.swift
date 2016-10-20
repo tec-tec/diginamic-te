@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         do {
             let place = try placeFromForm()
             directory.add(place: place)
-            print("Lieu ajouté")
+            dismiss(animated: true, completion: nil)
         } catch FormError.nilTextIn(let textField) {
             textField.backgroundColor = UIColor.red
             textField.sayNo()
@@ -113,6 +113,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func cancel(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func autoCoordinatesSwitchValueChanged(_ sender: UISwitch) {

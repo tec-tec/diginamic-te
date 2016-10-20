@@ -15,6 +15,11 @@ class PlaceTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         directory.generateDemoData()
+
+        let notCenter = NotificationCenter.default
+        notCenter.addObserver(forName: Notification.Name("modelUpdated"), object: nil, queue: nil) { (notif) in
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source

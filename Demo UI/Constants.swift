@@ -22,4 +22,9 @@ struct Constants {
             static let url = "http://jkgsdjkfr"
         }
     }
+
+    struct UserDefaults {
+        static let firstNameBoolKey = "firstNameBoolKeyUserDefaults"
+        static let alreadyLaunchedBoolKey = "alreadyLaunchedBoolKeyUserDefaults"
+    }
 }

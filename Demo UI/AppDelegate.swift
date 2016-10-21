@@ -22,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UIButton.appearance().tintColor = UIColor.green
 //        UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).backgroundColor = UIColor.blue
 
+        let prefs = UserDefaults.standard
+        if !prefs.bool(forKey: Constants.UserDefaults.alreadyLaunchedBoolKey) {
+            //Perfom app init
+            prefs.set(true, forKey: Constants.UserDefaults.alreadyLaunchedBoolKey)
+        }
+
         return true
     }
 

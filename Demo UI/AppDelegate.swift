@@ -28,6 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             prefs.set(true, forKey: Constants.UserDefaults.alreadyLaunchedBoolKey)
         }
 
+//        DispatchQueue.global(qos: .userInteractive).async {
+//            for i in 0...1000000 {
+//                print("Toto \(i)")
+//            }
+//
+//            DispatchQueue.main.async {
+//                //Je suis sur le trhread principal
+//
+//            }
+//
+//        }
+
         return true
     }
 

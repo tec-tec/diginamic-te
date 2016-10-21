@@ -11,6 +11,8 @@
 		33ACDACF1DB9FE6800363F26 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDACE1DB9FE6800363F26 /* PlaceDetailsViewController.swift */; };
 		33ACDAD21DBA09F800363F26 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ACDAD11DBA09F800363F26 /* MapKit.framework */; };
 		33ACDAD41DBA0ECD00363F26 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */; };
+		33ACDADC1DBA406D00363F26 /* Demo_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDADB1DBA406D00363F26 /* Demo_UITests.swift */; };
+		33ACDAE41DBA411100363F26 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDAE31DBA411100363F26 /* DirectoryTests.swift */; };
 		33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB61DB7A98B00276650 /* Extensions.swift */; };
 		33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */; };
 		33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEC2A21DB62C4300273EA7 /* AppDelegate.swift */; };
@@ -22,11 +24,25 @@
 		33FEC2BA1DB6628900273EA7 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEC2B91DB6628900273EA7 /* Directory.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		33ACDADE1DBA406D00363F26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33FEC2971DB62C4200273EA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FEC29E1DB62C4200273EA7;
+			remoteInfo = "Demo UI";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		33ACDACC1DB8C2A900363F26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33ACDACE1DB9FE6800363F26 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		33ACDAD11DBA09F800363F26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		33ACDAD91DBA406C00363F26 /* Demo UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33ACDADB1DBA406D00363F26 /* Demo_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_UITests.swift; sourceTree = "<group>"; };
+		33ACDADD1DBA406D00363F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33ACDAE31DBA411100363F26 /* DirectoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryTests.swift; sourceTree = "<group>"; };
 		33DFEBB61DB7A98B00276650 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
 		33FEC29F1DB62C4300273EA7 /* Demo UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33ACDAD61DBA406C00363F26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FEC29C1DB62C4200273EA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,10 +83,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		33ACDADA1DBA406D00363F26 /* Demo UITests */ = {
+			isa = PBXGroup;
+			children = (
+				33ACDADB1DBA406D00363F26 /* Demo_UITests.swift */,
+				33ACDAE31DBA411100363F26 /* DirectoryTests.swift */,
+				33ACDADD1DBA406D00363F26 /* Info.plist */,
+			);
+			path = "Demo UITests";
+			sourceTree = "<group>";
+		};
 		33FEC2961DB62C4200273EA7 = {
 			isa = PBXGroup;
 			children = (
 				33FEC2A11DB62C4300273EA7 /* Demo UI */,
+				33ACDADA1DBA406D00363F26 /* Demo UITests */,
 				33FEC2A01DB62C4300273EA7 /* Products */,
 				33ACDAD01DBA09F800363F26 /* Frameworks */,
 			);
@@ -73,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				33FEC29F1DB62C4300273EA7 /* Demo UI.app */,
+				33ACDAD91DBA406C00363F26 /* Demo UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33ACDAD81DBA406C00363F26 /* Demo UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33ACDAE21DBA406D00363F26 /* Build configuration list for PBXNativeTarget "Demo UITests" */;
+			buildPhases = (
+				33ACDAD51DBA406C00363F26 /* Sources */,
+				33ACDAD61DBA406C00363F26 /* Frameworks */,
+				33ACDAD71DBA406C00363F26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33ACDADF1DBA406D00363F26 /* PBXTargetDependency */,
+			);
+			name = "Demo UITests";
+			productName = "Demo UITests";
+			productReference = 33ACDAD91DBA406C00363F26 /* Demo UITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		33FEC29E1DB62C4200273EA7 /* Demo UI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33FEC2B11DB62C4300273EA7 /* Build configuration list for PBXNativeTarget "Demo UI" */;
@@ -151,6 +204,12 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tec-Tec";
 				TargetAttributes = {
+					33ACDAD81DBA406C00363F26 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = A7SGM6JEMA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33FEC29E1DB62C4200273EA7;
+					};
 					33FEC29E1DB62C4200273EA7 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = A7SGM6JEMA;
@@ -177,11 +236,19 @@
 			projectRoot = "";
 			targets = (
 				33FEC29E1DB62C4200273EA7 /* Demo UI */,
+				33ACDAD81DBA406C00363F26 /* Demo UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33ACDAD71DBA406C00363F26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FEC29D1DB62C4200273EA7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +262,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33ACDAD51DBA406C00363F26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33ACDADC1DBA406D00363F26 /* Demo_UITests.swift in Sources */,
+				33ACDAE41DBA411100363F26 /* DirectoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FEC29B1DB62C4200273EA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +288,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33ACDADF1DBA406D00363F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FEC29E1DB62C4200273EA7 /* Demo UI */;
+			targetProxy = 33ACDADE1DBA406D00363F26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		33FEC2A61DB62C4300273EA7 /* Main.storyboard */ = {
@@ -233,6 +317,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33ACDAE01DBA406D00363F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = "Demo UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tectec.training.te.Demo-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo UI.app/Demo UI";
+			};
+			name = Debug;
+		};
+		33ACDAE11DBA406D00363F26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = "Demo UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tectec.training.te.Demo-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo UI.app/Demo UI";
+			};
+			name = Release;
+		};
 		33FEC2AF1DB62C4300273EA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +467,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33ACDAE21DBA406D00363F26 /* Build configuration list for PBXNativeTarget "Demo UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33ACDAE01DBA406D00363F26 /* Debug */,
+				33ACDAE11DBA406D00363F26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		33FEC29A1DB62C4200273EA7 /* Build configuration list for PBXProject "Demo UI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

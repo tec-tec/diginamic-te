@@ -29,7 +29,21 @@ class PlaceDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        // Do any additional setup after loading the view.
+
+//        let url = URL(string: "https://images2.cardekho.com/images/expertreviewseditor/large/maruti-swift/20160301_123908/maruti-swift0.jpg")!
+//
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//
+//            guard error == nil else { return }
+//            guard let data = data else { return }
+//            let image = UIImage(data: data)
+//
+//            DispatchQueue.main.async {
+//                self.phoneStackView.addSubview(UIImageView(image: image))
+//            }
+//        }
+//
+//        task.resume()
     }
 
     override func didReceiveMemoryWarning() {

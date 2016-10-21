@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,18 +112,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-cC-Kaj">
-                                <frame key="frameInset" minX="130" minY="150" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5Wu-VP-vFd"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4Z-bf-5fI">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbL-kn-Rxe">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pnk-Tc-Oyy">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLD-xF-8e2">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-IW-nKl">
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U32-IE-PPY">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yh-g1-0Ls">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXQ-Y2-zLP">
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="u8y-Nn-GjA">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wikipedia page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-R7-6sH">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-av-R2C">
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.31785096680000002" blue="0.42677525490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Wu-VP-vFd" secondAttribute="trailing" id="67N-Uc-ehr"/>
+                            <constraint firstItem="5Wu-VP-vFd" firstAttribute="top" secondItem="11y-if-JYC" secondAttribute="top" id="Iqg-vn-21s"/>
+                            <constraint firstItem="5Wu-VP-vFd" firstAttribute="leading" secondItem="X4Z-bf-5fI" secondAttribute="leading" constant="-8" id="Um1-yP-DXZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lbL-kn-Rxe" secondAttribute="trailing" id="YMD-Ud-mPs"/>
+                            <constraint firstItem="lbL-kn-Rxe" firstAttribute="leading" secondItem="11y-if-JYC" secondAttribute="leadingMargin" id="ZQ6-7V-Yf2"/>
+                            <constraint firstItem="5Wu-VP-vFd" firstAttribute="height" secondItem="11y-if-JYC" secondAttribute="height" multiplier="0.5" id="bUP-ho-8vX"/>
+                            <constraint firstItem="5Wu-VP-vFd" firstAttribute="leading" secondItem="11y-if-JYC" secondAttribute="leading" id="gZk-cb-fO9"/>
+                            <constraint firstItem="X4Z-bf-5fI" firstAttribute="bottom" secondItem="5Wu-VP-vFd" secondAttribute="bottom" constant="-8" id="uqf-Ry-3y6"/>
+                            <constraint firstItem="lbL-kn-Rxe" firstAttribute="top" secondItem="5Wu-VP-vFd" secondAttribute="bottom" constant="8" id="wgB-Jx-4au"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="X4Z-bf-5fI" id="OjL-Ze-gxS"/>
+                        <outlet property="mapView" destination="5Wu-VP-vFd" id="CqZ-hI-fxA"/>
+                        <outlet property="phoneButton" destination="Uz3-IW-nKl" id="1J0-El-ZFg"/>
+                        <outlet property="phoneStackView" destination="Pnk-Tc-Oyy" id="bZL-b3-gfJ"/>
+                        <outlet property="websiteButton" destination="dXQ-Y2-zLP" id="S1M-xW-ZTF"/>
+                        <outlet property="websiteStack" destination="U32-IE-PPY" id="dIu-q2-tV8"/>
+                        <outlet property="wikipediaButton" destination="PJa-av-R2C" id="rzZ-VP-F5s"/>
+                        <outlet property="wikipediaStack" destination="u8y-Nn-GjA" id="cIS-d1-YuU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zE-Gt-eqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="-27"/>
+            <point key="canvasLocation" x="2936.8000000000002" y="-27.436281859070466"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

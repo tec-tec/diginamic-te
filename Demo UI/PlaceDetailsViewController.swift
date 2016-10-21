@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import MapKit
 
 class PlaceDetailsViewController: UIViewController {
 
+    //MARK: Outlets
+    @IBOutlet weak var wikipediaStack: UIStackView!
+    @IBOutlet weak var phoneStackView: UIStackView!
+    @IBOutlet weak var websiteStack: UIStackView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
+    @IBOutlet weak var wikipediaButton: UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
+
+    //MARK: Instance variables
+    var place: Place?
+
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

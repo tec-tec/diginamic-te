@@ -61,5 +61,11 @@ class PlaceDetailsViewController: UIViewController {
         } else {
             wikipediaStack.isHidden = true
         }
+
+        if let annotation = PlaceAnnotation(place: place) {
+            mapView.addAnnotation(annotation)
+            let region = MKCoordinateRegion(center: annotation.coordinate, span:MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+            mapView.setRegion(region, animated: true)
+        }
     }
 }

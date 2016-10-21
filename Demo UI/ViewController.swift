@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     //MARK: - Instance variables
     let directory = Directory.instance
     var name: String?
+    let manager = CLLocationManager()
+
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -125,6 +127,10 @@ class ViewController: UIViewController {
         }
 
         if sender.isOn {
+
+            manager.delegate = self
+            manager.startUpdatingLocation()
+
             guard let location = CLLocationManager().location else { return }
             latitudeTextField.text = "\(location.coordinate.latitude)"
             longitudeTextField.text = "\(location.coordinate.longitude)"
@@ -142,6 +148,16 @@ class ViewController: UIViewController {
         case nilTextIn (textField: UITextField)
         case notEnoughtCharactersIn (textField: UITextField, minCharacters: Int)
         case wrongTypeOfDataIn (textField: UITextField)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        latitudeTextField.text = "\(locations.last?.coordinate.latitude)"
+        longitudeTextField.text = "\(locations.last?.coordinate.longitude)"
+        print(locations)
+//        manager.stopUpdatingLocation()
     }
 }
 

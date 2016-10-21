@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         //Example of UIAppearance proxy to change global appearance of the app
-        UIButton.appearance().backgroundColor = UIColor.red
-        UIButton.appearance().tintColor = UIColor.green
-        UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).backgroundColor = UIColor.blue
+//        UIButton.appearance().backgroundColor = UIColor.red
+//        UIButton.appearance().tintColor = UIColor.green
+//        UIButton.appearance(whenContainedInInstancesOf: [UINavigationController.self]).backgroundColor = UIColor.blue
 
         return true
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 // Class xxxx is not key value coding compliant for key yyy (Au lancement de l'app)
 // Unrecognized selector sent to instance (Au déclenchement d'une action)
@@ -121,6 +122,12 @@ class ViewController: UIViewController {
     @IBAction func autoCoordinatesSwitchValueChanged(_ sender: UISwitch) {
         for tf in coordinateTextFields {
             tf.isEnabled = !sender.isOn
+        }
+
+        if sender.isOn {
+            guard let location = CLLocationManager().location else { return }
+            latitudeTextField.text = "\(location.coordinate.latitude)"
+            longitudeTextField.text = "\(location.coordinate.longitude)"
         }
     }
 

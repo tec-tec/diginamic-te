@@ -129,6 +129,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-IW-nKl">
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="call:" destination="mYm-LK-2dg" eventType="touchUpInside" id="cb3-GV-RgR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -141,6 +144,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXQ-Y2-zLP">
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="openWebsite:" destination="mYm-LK-2dg" eventType="touchUpInside" id="RSC-Nw-rp8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -153,6 +159,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJa-av-R2C">
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="openWikipedia:" destination="mYm-LK-2dg" eventType="touchUpInside" id="dt7-XL-3Gd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SafariServices
 
 class PlaceDetailsViewController: UIViewController {
 
@@ -76,5 +77,28 @@ class PlaceDetailsViewController: UIViewController {
             let region = MKCoordinateRegion(center: annotation.coordinate, span:MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
             mapView.setRegion(region, animated: true)
         }
+    }
+
+    @IBAction func call(_ sender: AnyObject) {
+        guard let phone = place?.phoneNumber, let phoneURL = URL(string: "phone://\(phone)") else { return }
+
+        if UIApplication.shared.canOpenURL(phoneURL) {
+            UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    @IBAction func openWebsite(_ sender: AnyObject) {
+        guard let p = place, let url = p.websiteURL else { return }
+        openSafariController(url: url)
+    }
+
+    @IBAction func openWikipedia(_ sender: AnyObject) {
+        guard let p = place, let url = p.wikipediaURL else { return }
+        openSafariController(url: url)
+    }
+
+    private func openSafariController(url: URL) {
+        let controller = SFSafariViewController(url: url)
+        present(controller, animated: true, completion: nil)
     }
 }

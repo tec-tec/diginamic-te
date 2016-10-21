@@ -10,6 +10,7 @@
 		33ACDACD1DB8C2A900363F26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDACC1DB8C2A900363F26 /* Constants.swift */; };
 		33ACDACF1DB9FE6800363F26 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDACE1DB9FE6800363F26 /* PlaceDetailsViewController.swift */; };
 		33ACDAD21DBA09F800363F26 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ACDAD11DBA09F800363F26 /* MapKit.framework */; };
+		33ACDAD41DBA0ECD00363F26 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */; };
 		33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB61DB7A98B00276650 /* Extensions.swift */; };
 		33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */; };
 		33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEC2A21DB62C4300273EA7 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		33ACDACC1DB8C2A900363F26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33ACDACE1DB9FE6800363F26 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		33ACDAD11DBA09F800363F26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		33DFEBB61DB7A98B00276650 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
 		33FEC29F1DB62C4300273EA7 /* Demo UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			children = (
 				33FEC2B41DB65FB200273EA7 /* Place.swift */,
 				33FEC2B91DB6628900273EA7 /* Directory.swift */,
+				33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */,
+				33ACDAD41DBA0ECD00363F26 /* PlaceAnnotation.swift in Sources */,
 				33FEC2B51DB65FB200273EA7 /* Place.swift in Sources */,
 				33ACDACF1DB9FE6800363F26 /* PlaceDetailsViewController.swift in Sources */,
 				33FEC2A51DB62C4300273EA7 /* ViewController.swift in Sources */,

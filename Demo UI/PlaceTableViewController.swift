@@ -79,6 +79,16 @@ class PlaceTableViewController: UITableViewController {
 
         } else if segue.identifier == "showDetails" {
             //Transition vers le la vue de détails
+            guard let destination = segue.destination as? PlaceDetailsViewController else {
+                fatalError("Someone changed the storyboard !!")
+            }
+            guard let cell = sender as? UITableViewCell else {
+                fatalError("The sender is not a cell")
+            }
+            guard let index = tableView.indexPath(for: cell)?.row else {
+                fatalError("The cell is not in the table view")
+            }
+            destination.place = directory.allPlaces[index]
         }
     }
 }

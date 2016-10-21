@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class Directory {
 
@@ -19,6 +20,11 @@ class Directory {
     }
 
     var allPlaces: [Place] {
+
+        let context = CoreDataStack.instance.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<CDPlace> = CDPlace.fetchRequest()
+        let result = try? context.fetch(fetchRequest)
+
         return storage
     }
 
@@ -26,6 +32,17 @@ class Directory {
         guard !storage.contains(place) else { return }
         storage.append(place)
         notifyUpdate()
+
+        let context = CoreDataStack.instance.persistentContainer.viewContext
+        let placeCD = CDPlace(context: context)
+        placeCD.name = place.name
+        placeCD.address = place.address
+        placeCD.note = place.note
+        let city = CDCity(context: context)
+        city.name = "Paris"
+        placeCD.city = city
+
+        CoreDataStack.instance.saveContext()
     }
 
     func remove(place: Place) {

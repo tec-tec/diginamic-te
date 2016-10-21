@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A320" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDCity" representedClassName=".CDCity" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="places" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDPlace" inverseName="city" inverseEntity="CDPlace" syncable="YES"/>
+    </entity>
+    <entity name="CDPlace" representedClassName=".CDPlace" syncable="YES">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="note" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="city" maxCount="1" deletionRule="Nullify" destinationEntity="CDCity" inverseName="places" inverseEntity="CDCity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDPlace" positionX="-9333" positionY="-5877" width="128" height="103"/>
+        <element name="CDCity" positionX="-9137" positionY="-5868" width="128" height="73"/>
+    </elements>
+</model>

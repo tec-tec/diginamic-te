@@ -14,6 +14,12 @@
 		33ACDADC1DBA406D00363F26 /* Demo_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDADB1DBA406D00363F26 /* Demo_UITests.swift */; };
 		33ACDAE41DBA411100363F26 /* DirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDAE31DBA411100363F26 /* DirectoryTests.swift */; };
 		33ACDAEC1DBA459A00363F26 /* Demo_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDAEB1DBA459A00363F26 /* Demo_UIUITests.swift */; };
+		33ACDB161DBA49F700363F26 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB141DBA49F700363F26 /* Model.xcdatamodeld */; };
+		33ACDB1B1DBA4BFC00363F26 /* CDCity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB171DBA4BFC00363F26 /* CDCity+CoreDataClass.swift */; };
+		33ACDB1C1DBA4BFC00363F26 /* CDCity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB181DBA4BFC00363F26 /* CDCity+CoreDataProperties.swift */; };
+		33ACDB1D1DBA4BFC00363F26 /* CDPlace+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB191DBA4BFC00363F26 /* CDPlace+CoreDataClass.swift */; };
+		33ACDB1E1DBA4BFC00363F26 /* CDPlace+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB1A1DBA4BFC00363F26 /* CDPlace+CoreDataProperties.swift */; };
+		33ACDB201DBA4CCF00363F26 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACDB1F1DBA4CCF00363F26 /* CoreDataStack.swift */; };
 		33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB61DB7A98B00276650 /* Extensions.swift */; };
 		33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */; };
 		33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEC2A21DB62C4300273EA7 /* AppDelegate.swift */; };
@@ -54,6 +60,12 @@
 		33ACDAE91DBA459A00363F26 /* Demo UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo UIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ACDAEB1DBA459A00363F26 /* Demo_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_UIUITests.swift; sourceTree = "<group>"; };
 		33ACDAED1DBA459A00363F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33ACDB151DBA49F700363F26 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		33ACDB171DBA4BFC00363F26 /* CDCity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		33ACDB181DBA4BFC00363F26 /* CDCity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDCity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33ACDB191DBA4BFC00363F26 /* CDPlace+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPlace+CoreDataClass.swift"; sourceTree = "<group>"; };
+		33ACDB1A1DBA4BFC00363F26 /* CDPlace+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPlace+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33ACDB1F1DBA4CCF00363F26 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		33DFEBB61DB7A98B00276650 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		33DFEBB81DB7B0E700276650 /* PlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewController.swift; sourceTree = "<group>"; };
 		33FEC29F1DB62C4300273EA7 /* Demo UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,9 +171,15 @@
 		33FEC2B61DB65FCD00273EA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				33ACDB171DBA4BFC00363F26 /* CDCity+CoreDataClass.swift */,
+				33ACDB181DBA4BFC00363F26 /* CDCity+CoreDataProperties.swift */,
+				33ACDB191DBA4BFC00363F26 /* CDPlace+CoreDataClass.swift */,
+				33ACDB1A1DBA4BFC00363F26 /* CDPlace+CoreDataProperties.swift */,
+				33ACDB141DBA49F700363F26 /* Model.xcdatamodeld */,
 				33FEC2B41DB65FB200273EA7 /* Place.swift */,
 				33FEC2B91DB6628900273EA7 /* Directory.swift */,
 				33ACDAD31DBA0ECD00363F26 /* PlaceAnnotation.swift */,
+				33ACDB1F1DBA4CCF00363F26 /* CoreDataStack.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -344,14 +362,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33ACDB201DBA4CCF00363F26 /* CoreDataStack.swift in Sources */,
 				33DFEBB71DB7A98B00276650 /* Extensions.swift in Sources */,
 				33ACDAD41DBA0ECD00363F26 /* PlaceAnnotation.swift in Sources */,
 				33FEC2B51DB65FB200273EA7 /* Place.swift in Sources */,
 				33ACDACF1DB9FE6800363F26 /* PlaceDetailsViewController.swift in Sources */,
+				33ACDB1B1DBA4BFC00363F26 /* CDCity+CoreDataClass.swift in Sources */,
+				33ACDB1D1DBA4BFC00363F26 /* CDPlace+CoreDataClass.swift in Sources */,
 				33FEC2A51DB62C4300273EA7 /* ViewController.swift in Sources */,
 				33FEC2A31DB62C4300273EA7 /* AppDelegate.swift in Sources */,
 				33ACDACD1DB8C2A900363F26 /* Constants.swift in Sources */,
+				33ACDB161DBA49F700363F26 /* Model.xcdatamodeld in Sources */,
+				33ACDB1C1DBA4BFC00363F26 /* CDCity+CoreDataProperties.swift in Sources */,
 				33FEC2BA1DB6628900273EA7 /* Directory.swift in Sources */,
+				33ACDB1E1DBA4BFC00363F26 /* CDPlace+CoreDataProperties.swift in Sources */,
 				33DFEBB91DB7B0E700276650 /* PlaceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +626,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33ACDB141DBA49F700363F26 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33ACDB151DBA49F700363F26 /* Model.xcdatamodel */,
+			);
+			currentVersion = 33ACDB151DBA49F700363F26 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 33FEC2971DB62C4200273EA7 /* Project object */;
 }

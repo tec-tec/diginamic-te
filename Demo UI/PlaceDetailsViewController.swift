@@ -80,7 +80,7 @@ class PlaceDetailsViewController: UIViewController {
     }
 
     @IBAction func call(_ sender: AnyObject) {
-        guard let phone = place?.phoneNumber, let phoneURL = URL(string: "phone://\(phone)") else { return }
+        guard let phone = place?.phoneNumber, let phoneURL = URL(string: "tel://\(phone)") else { return }
 
         if UIApplication.shared.canOpenURL(phoneURL) {
             UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)

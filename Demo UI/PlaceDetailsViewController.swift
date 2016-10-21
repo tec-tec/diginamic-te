@@ -27,7 +27,7 @@ class PlaceDetailsViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureUI()
         // Do any additional setup after loading the view.
     }
 
@@ -35,16 +35,31 @@ class PlaceDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func configureUI() {
+        guard let place = place else {
+            fatalError("No place !")
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        title = place.name
+        addressLabel.text = place.address
+
+        if let phone = place.phoneNumber {
+            phoneButton.setTitle(phone, for: .normal)
+        } else {
+            phoneStackView.isHidden = true
+        }
+
+        if let website = place.websiteURL?.absoluteString {
+            websiteButton.setTitle(website, for: .normal)
+        } else {
+            websiteStack.isHidden = true
+        }
+
+        if let wikipedia = place.wikipediaURL?.absoluteString {
+            wikipediaButton.setTitle(wikipedia, for: .normal)
+        } else {
+            wikipediaStack.isHidden = true
+        }
     }
-    */
-
 }

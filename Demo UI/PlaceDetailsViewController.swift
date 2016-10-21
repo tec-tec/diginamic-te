@@ -44,6 +44,15 @@ class PlaceDetailsViewController: UIViewController {
         title = place.name
         addressLabel.text = place.address
 
+        //nil-coalescing operator
+//        addressLabel.text = place.phoneNumber ?? "No phone"
+//
+//        if let phone = place.phoneNumber {
+//            addressLabel.text = phone
+//        } else {
+//            addressLabel.text = "No Phone"
+//        }
+
         if let phone = place.phoneNumber {
             phoneButton.setTitle(phone, for: .normal)
         } else {

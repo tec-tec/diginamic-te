@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1177" y="430"/>
         </scene>
-        <!--View Controller-->
+        <!--Place Details View Controller-->
         <scene sceneID="PoT-BP-FnX">
             <objects>
-                <viewController id="mYm-LK-2dg" sceneMemberID="viewController">
+                <viewController id="mYm-LK-2dg" customClass="PlaceDetailsViewController" customModule="Demo_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VLO-VJ-tmT"/>
                         <viewControllerLayoutGuide type="bottom" id="CN9-Wu-xTk"/>
